@@ -193,7 +193,7 @@ class ListView extends Component {
             onChange={ this.filterPlaces }
             className="search-places"
             role="search"
-            aria-labelledby="text filter"
+            aria-label="text filter"
             tabIndex={ listOpen ? '0' : '-1' }
           />
           { apiReturned && filteredPlaces.length > 0 ?
