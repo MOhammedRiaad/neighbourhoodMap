@@ -59,7 +59,8 @@ export const getFSLocations = (mapCenter) => {
     console.log(places.length)
 
     const goodPlaces = places.filter( place => place.location.address && place.location.city && place.location.city === "Cairo");
-    if(goodPlaces.length >=5 ){
+    // sort restaurants in area for trusted ones  before updating state
+    if(goodPlaces.length >=10 ){
       goodPlaces ;
 
       goodPlaces.sort(sortName);
@@ -73,7 +74,7 @@ export const getFSLocations = (mapCenter) => {
 
     }
 
-    // sort restaurants in area for trusted ones  before updating state
+    
     
 
   })
