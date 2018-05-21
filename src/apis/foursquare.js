@@ -56,12 +56,26 @@ export const getFSLocations = (mapCenter) => {
     })
   .then(data => {
     const places = data.response.venues;
+    console.log(places.length)
+
     const goodPlaces = places.filter( place => place.location.address && place.location.city && place.location.city === "Cairo");
+    if(goodPlaces.length >=5 ){
+      goodPlaces ;
+
+      goodPlaces.sort(sortName);
+      return goodPlaces;
+
+    }else{
+      places;
+
+      places.sort(sortName);
+      return places;
+
+    }
 
     // sort restaurants in area for trusted ones  before updating state
-    goodPlaces.sort(sortName);
+    
 
-    return goodPlaces;
   })
 
 }
