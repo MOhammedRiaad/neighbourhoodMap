@@ -18,12 +18,12 @@ class App extends Component {
 
   // define the default proptypes for component 
   static propTypes = {
-    map: PropTypes.object.isRequired,
-    infowindow: PropTypes.object.isRequired,
-    bounds: PropTypes.object.isRequired,
-    mapCenter: PropTypes.object.isRequired,
-    mapReady :PropTypes.bool.isRequired,
-    mapError :PropTypes.bool.isRequired
+    map: PropTypes.object,
+    infowindow: PropTypes.object,
+    bounds: PropTypes.object,
+    mapCenter: PropTypes.object,
+    mapReady :PropTypes.bool,
+    mapError :PropTypes.bool
   }  
 
   // component state 
