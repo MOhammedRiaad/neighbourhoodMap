@@ -1,4 +1,4 @@
-# Restaurants aroud Cairo
+# Restaurants Around Cairo
 ---
 
 ## Project Purpose:
