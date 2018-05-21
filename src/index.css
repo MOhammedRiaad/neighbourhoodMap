@@ -23,6 +23,7 @@ body {
   transform: translate(-300px, 0);
   transition: transform 0.5s ease;
   width: 260px;
+  height: 100vh;
   z-index: 5;
 }
 
@@ -31,18 +32,21 @@ body {
 }
 
 .app-title {
-  color: #360dec;
-  font-family: 'Courier New', Courier, monospace ;
+  color: #4e595d;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 10px 0;
-  font-size: 24px
+  font-size: 24px;
+  text-align: center
 }
 
 .fs-logo {
-  max-width: 100%;
+  padding: 0;
+  margin: auto ;
+  width :60%;
 }
 
 .places-list {
-  height: 400px;
+  height: 380px;
   list-style-type: none;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -51,15 +55,6 @@ body {
 
 .place {
   margin: 10px 0;
-}
-
-.query {
-  
-  border-radius: 10px;
-  font: 18px 'Source Sans Pro', sans-serif;
-  margin: 5px 0 5px 0;
-  padding: 10px;
-  width: 250px;
 }
 
 .search-places {
@@ -72,6 +67,16 @@ body {
   font-size: 1.2em;
   border: 1;
   outline: none;
+}
+
+.search-places p {
+  padding: 0px;
+  margin: auto;
+}
+
+.list h3 {
+  padding: 0px;
+  font-size: 20px;
 }
 
 .error {
@@ -192,11 +197,12 @@ body {
   color: #360dec;
   text-align: center;
 }
+
 /* scrollbar*/
+
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 
 @media (min-width: 600px) {
   .list {
@@ -204,33 +210,27 @@ body {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-
   .map {
     margin-left: 300px
   }
-
   .toggle {
     display: none;
   }
-
   .places-list {
     height: 60vh;
   }
-
   /* scrollbar*/
   ::-webkit-scrollbar-track {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   }
-
   ::-webkit-scrollbar-thumb {
     background: #eee;
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: #3594c5;
   }

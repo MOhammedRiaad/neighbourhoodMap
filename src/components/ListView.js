@@ -166,7 +166,7 @@ class ListView extends Component {
     // sort array before updating state
     filteredPlaces.sort(this.sortName);
 
-    this.setState({filteredPlaces: filteredPlaces })
+    this.setState({ filteredPlaces })
   }
 
   showInfo = (place) => {
@@ -196,6 +196,7 @@ class ListView extends Component {
             aria-label="text filter"
             tabIndex={ listOpen ? '0' : '-1' }
           />
+          <p> You have <strong>{this.state.filteredPlaces.length}</strong> Markers on Map</p>         
           { apiReturned && filteredPlaces.length > 0 ?
           <ul className="places-list">
             {filteredPlaces.map((place, id) =>

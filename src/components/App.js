@@ -127,7 +127,6 @@ class App extends Component {
             : <p>We are experiencing loading issues. Please check your internet connection</p>
           }
           <h3>Created By Mohamed Riaad</h3>
-          <hr/>
           <img src={foursquare} className="fs-logo" alt="foursquare" />
 
         </section>
