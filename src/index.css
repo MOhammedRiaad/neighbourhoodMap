@@ -1,0 +1,245 @@
+/**
+ * @description FEND Project 8 : Neighborhood
+ * @description main component
+ * @author Mohamed Riaad
+ * @version 1.0
+ */
+
+body {
+  color: #4e595d;
+  font: 18px 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  -ms-transform: translate(-260px, 0);
+  -webkit-transform: translate(-260px, 0);
+  transform: translate(-300px, 0);
+  transition: transform 0.5s ease;
+  width: 260px;
+  z-index: 5;
+}
+
+.map {
+  height: 100vh;
+}
+
+.app-title {
+  color: #360dec;
+  font-family: 'Courier New', Courier, monospace ;
+  margin: 10px 0;
+  font-size: 24px
+}
+
+.fs-logo {
+  max-width: 100%;
+}
+
+.places-list {
+  height: 400px;
+  list-style-type: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+.place {
+  margin: 10px 0;
+}
+
+.query {
+  
+  border-radius: 10px;
+  font: 18px 'Source Sans Pro', sans-serif;
+  margin: 5px 0 5px 0;
+  padding: 10px;
+  width: 250px;
+}
+
+.search-places {
+  width: 190px;
+  padding: 10px 10px 10px 50px;
+  background-image: url('./images/search.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 1.2em;
+  font-size: 1.2em;
+  border: 1;
+  outline: none;
+}
+
+.error {
+  color: #360dec;
+  font-style: italic;
+  padding-top: 400px;
+  text-align: center;
+}
+
+.empty-input {
+  color: #360dec;
+  font-style: italic;
+  text-align: center;
+}
+
+.toggle {
+  background: #fff;
+  border: 2px solid #4e595d;
+  border-radius: 5px;
+  fill: #4e595d;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  z-index: 5;
+}
+
+.open {
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.loading-map {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.loading-fs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading-message {
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* infowindow */
+
+.place {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.place-title,
+.place-contact,
+.place-phone {
+  margin: 0 0 0 10px;
+}
+
+.place-data {
+  font-style: italic;
+  margin: 0 0 0 10px;
+}
+
+.place-price {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+}
+
+.place-phone {
+  color: #4e595d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.place-contact,
+.place-data,
+.place-tip,
+.place-phone {
+  font-size: 14px;
+}
+
+.place-tip {
+  font-style: italic;
+}
+
+.place-link {
+  color: #360dec;
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 20px 0 0 10px;
+  padding: 10px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.place-link:hover,
+.place-phone:hover {
+  color: #3594c5;
+}
+
+.fs-link {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.venue-error {
+  color: #360dec;
+  text-align: center;
+}
+/* scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+@media (min-width: 600px) {
+  .list {
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .map {
+    margin-left: 300px
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .places-list {
+    height: 60vh;
+  }
+
+  /* scrollbar*/
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #eee;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3594c5;
+  }
+}
+
+/* colors
+lt green: #aee9c6
+mid blue: #3594c5
+red: #f94877
+dark gray: #4e595d
+light gray:
+*/
